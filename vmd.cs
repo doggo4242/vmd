@@ -19,7 +19,7 @@ namespace vmd{
 			if(Environment.ProcessorCount < 2){
 				return true;
 			}
-			ManagementObjectSearcher managementObjectSearcher = new ManagementObjectSearcher(new ObjectQuery("SELECT * FROM Win32_OperatingSystem");
+			ManagementObjectSearcher managementObjectSearcher = new ManagementObjectSearcher(new ObjectQuery("SELECT * FROM Win32_OperatingSystem"));
 			if(int.Parse(managementObjectSearcher.Get().OfType<ManagementObject>().FirstOrDefault()["TotalVisibleMemorySize"].ToString()) < 1.074e6){
 				return true;
 			}

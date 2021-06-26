@@ -19,3 +19,9 @@ jobs:
     - uses: actions/checkout@v2
     - name: make
       run: make gdb strace qemu valgrind standalone
+    - name: upload artifact
+      uses: actions/upload-artifact@v2.2.4
+      with:
+        name: vmd
+        path: vmd
+
